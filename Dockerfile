@@ -1,7 +1,8 @@
 FROM alpine:latest
 
 MAINTAINER Sidesplitter, https://github.com/SexualRhinoceros/MusicBot
-MAINTAINER dzirtt, https://github.com/dzirtt/musicBot_alpine 
+MAINTAINER dzirtt, https://github.com/dzirtt/musicBot_alpine
+MAINTAINER JigSaw, https://github.com/JigSawFr/SexualRhinoceros-MusicBot-Docker
 
 ##Install dependencies
 #donwload, unpack
@@ -20,8 +21,9 @@ RUN pip install discord.py[voice] \
 		youtube_dl \
 		pip
 							
-#download musicBot		
-RUN git clone -b master --single-branch https://github.com/SexualRhinoceros/MusicBot.git /musicBot							
+#download musicBot
+ENV branch="master"
+RUN git clone -b ${branch} --single-branch https://github.com/SexualRhinoceros/MusicBot.git /musicBot							
 WORKDIR /musicBot
 
 #cleanup
