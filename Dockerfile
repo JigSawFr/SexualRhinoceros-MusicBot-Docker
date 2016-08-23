@@ -22,7 +22,7 @@ RUN pip install discord.py[voice] \
 		pip
 							
 #download musicBot
-RUN git clone -b master --single-branch https://github.com/SexualRhinoceros/MusicBot.git /musicBot							
+RUN git clone -b review --single-branch https://github.com/SexualRhinoceros/MusicBot.git /musicBot							
 WORKDIR /musicBot
 
 #cleanup
